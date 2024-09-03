@@ -8,6 +8,11 @@ html {
   block-size: 100%;
 }
 
+h2 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -16,6 +21,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -35,4 +42,239 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.button:focus{
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+button:active {
+  background-color: #545050;
+}
+
+button:focus-visible {
+  border: 3px double #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+.content {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 30px;
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__fieldset {
+  font-weight: 400;
+  size: 18px;
+  line-height: 1.2;
+}
+
+.search-form__fieldset-title {
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  height: 31px;
+}
+
+.search-form__textfield {
+  cursor: text;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  min-width: 225px;
+  height: 27px;
+}
+
+.search-form__textfield:focus,  .search-form__textfield:focus-visible{
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #fff;
+  padding: 2px;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-form__label {
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='checkbox']:checked + span::after {
+  content: '';
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+}
+
+.search-form__checkbox-list > .search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  width: 194px;
+}
+
+.content__list {
+  height: 298px;
+  overflow-y: scroll;
+}
+
+.content__details {
+  width: 100%;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+.title > .content__accent {
+  color: #545050;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 4px 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  border: 1px solid #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 0.9;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.result__video-container, .content__list {
+  position: relative;
+}
+
+.more-button {
+  width: 399px;
 }
