@@ -200,7 +200,7 @@ input[type='checkbox']:checked + span::after {
 
 .content__list {
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__details {
